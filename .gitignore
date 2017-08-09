@@ -1,0 +1,4 @@
+*.pyc
+*.idea
+db.sqlite3
+IsazaEngTech/server_settings.py

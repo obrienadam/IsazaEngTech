@@ -1,0 +1,28 @@
+{% extends '__base.html' %}
+
+{% block navigation %}
+    {% include '_navbar.html' with active='about' %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">About</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                Isaza Eng Tech was founded in 2017 by Pedro Isaza in recognition of the increasing technical demands
+                of modern businesses.
+            </p>
+            <p>
+                The focus of the company is using advanced analytical and numerical mathematical techniques in order to
+                solve complex engineering problems. The result is more efficient systems, reduced production time and
+                a higher quality product brought to the market. We offer a diverse range of services ranging from custom
+                software to consulting. Our guarantee is that we will work closely with you and ensure the highest
+                standards of professionalism.
+            </p>
+        </div>
+    </div>
+{% endblock %}

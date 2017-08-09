@@ -1,0 +1,83 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Isaza Eng Tech website">
+    <meta name="author" content="Adam R. O'Brien">
+
+    <title>{% block title %}Isaza Eng Tech{% endblock %}</title>
+
+    {% block css %}
+        <!-- Bootstrap Core CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link href="{% static "pages/css/modern_business.css" %}" rel="stylesheet">
+        <link href="{% static "pages/css/custom.css" %}" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <!--
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        -->
+
+        <script src="https://use.fontawesome.com/bf2970f4ef.js"></script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {% endblock %}
+
+</head>
+
+<body>
+
+{% block navigation %}
+    {% include '_navbar.html' %}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+<!-- Page Content -->
+<div class="container">
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+        <!-- Footer -->
+        <hr>
+        <footer id="footer" role="contentinfo">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Isaza Eng Tech 2017</p>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+</div>
+<!-- /.container -->
+
+{% block js %}
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+</body>
+
+</html>
