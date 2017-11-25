@@ -17,11 +17,9 @@ from django.conf.urls import url, include
 from django.views.generic import TemplateView
 from django.contrib import admin
 
+from pages.views import ContactView
+
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='pages/index.html'), name='index'),
-    url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
-    url(r'^services/$', TemplateView.as_view(template_name='pages/services.html'), name='services'),
-    url(r'^careers/$', TemplateView.as_view(template_name='pages/careers.html'), name='careers'),
-    url(r'^contact/$', TemplateView.as_view(template_name='pages/contact.html'), name='contact'),
+    url(r'^', include('pages.urls', namespace='pages')),
     url(r'^admin/', admin.site.urls),
 ]

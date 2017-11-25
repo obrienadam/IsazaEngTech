@@ -1,0 +1,69 @@
+{% extends '__base.html' %}
+
+{% block navigation %}
+    {% include '_navbar.html' with active='services' %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Advanced Mathematical Modelling</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                One of our core services includes the advanced mathematical modelling of real-world
+                engineering applications. We use a diverse array of techniques to model phenomena including:
+            <ol>
+                <li class="h4">Heat transfer and thermal systems</li>
+                <ul>
+                    <li>Moving bed heat exchangers, pebble bed nuclear reactors, double-pipe and
+                        shell-and-tube heat exchangers, air coolers, etc.
+                    </li>
+                    <li>HVAC design and optimization</li>
+                    <li>Heat conduction in solids of different geometries</li>
+                </ul>
+                <li class="h4">Fluid systems</li>
+                <ul>
+                    <li>Incompressible and compressible pipe flow, aerodynamics and moving
+                        boundary problems
+                    </li>
+                    <li>Network optimization of multicomponent systems (i.e. industrial process
+                        modeling)
+                    </li>
+                    <li>Mutiphase systems – combustion, bitumen extraction, sedimentation, etc.</li>
+                </ul>
+            </ol>
+            </p>
+
+            <h2 class="page-header">Our Advantage</h2>
+            <p>
+                Our team consists of highly trained engineers with backgrounds in both industry and
+                academics. We seek to bridge the gap between novel, abstract ideas in academia and practical
+                implementation in industrial settings.
+            </p>
+
+            <h2 class="page-header">Analytical Mathematics</h2>
+            <p>
+                Our team has experience in conducting cutting edge mathematical research in Partial
+                Differential Equations (PDEs). We specialize in novel approaches for deriving governing
+                equations, such as the volume averaging method. Our mathematical techniques for solving
+                these problems include advanced integral transforms, Green’s functions and separation of
+                variables. This provides us with a deeper insight into the underlying physics of many
+                engineering problems.
+            </p>
+
+            <h2 class="page-header">Numerical Mathematics</h2>
+            <p>
+                Our team also has extensive experience in implementing and developing state-of- the-art
+                numerical modelling software for solving complex PDEs. Our expertise includes the
+                development of Computational Fluid Dynamics (CFD) software using the Finite-Volume Method
+                (FVM), numerical optimization, and Finite-Difference methods. We’ve successfully explored
+                problems ranging from the combustion of laboratory-scale burners to the dynamics of liquid
+                droplets. We also have considerable experience in High Performance Computing (HPC) for
+                resource intensive problems.
+            </p>
+        </div>
+    </div>
+{% endblock %}

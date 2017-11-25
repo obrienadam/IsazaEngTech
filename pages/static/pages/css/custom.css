@@ -58,3 +58,8 @@ h2.page-header {
     border-bottom-color: darkgrey;
 }
 
+.form {
+    border: solid whitesmoke 3px;
+    padding: 24px;
+}
+
