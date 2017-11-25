@@ -1,4 +1,5 @@
 {% extends '__base.html' %}
+{% load staticfiles %}
 
 {% block title %}Isaza Eng Tech - Home{% endblock %}
 
@@ -17,14 +18,14 @@
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill"
-                     style="background-image:url('https://appolicious.com/wp-content/uploads/2015/02/math-help.jpg');"></div>
+                     style="background-image:url('{% static 'pages/img/math_banner-min.png' %}');"></div>
                 <div class="carousel-caption">
                     <h2>Advanced Mathematical Modelling</h2>
                 </div>
             </div>
             <div class="item">
                 <div class="fill"
-                     style="background-image:url('http://www.new-atlantic.net/wp-content/uploads/2014/06/1900x1080-12.jpg');"></div>
+                     style="background-image:url('{% static 'pages/img/process_modelling_banner.png' %}');"></div>
                 <div class="carousel-caption">
                     <h2>Process Engineering</h2>
                 </div>
@@ -32,6 +33,10 @@
             <div class="item">
                 <div class="fill"
                      style="background-image:url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-38.jpg');"></div>
+                <!--
+                <div class="fill"
+                     style="background-image:url('{% static 'pages/img/custom_software_banner.png' %}');"></div>
+                     -->
                 <div class="carousel-caption">
                     <h2>Custom Engineering Software</h2>
                 </div>
@@ -57,55 +62,67 @@
 
 {% block content %}
     <!-- Marketing Icons Section -->
+
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Advanced Engineering Solutions
+                Advanced Engineering
             </h1>
         </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-calculator"></i> Advanced Mathematical Modelling</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Through our extensive experience in the academic world, we offer consulting based on advanced,
-                        cutting-edge mathematical approaches to solving a variety of equations that govern the physical
-                        phenomena behind many engineering applications.
-                    </p>
-                    <a href="{% url 'pages:services-advanced-mathematical-modelling' %}" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="{% static 'pages/img/math1.png' %}" class="img-responsive">
         </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-code"></i> Custom Engineering Software</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Our sophisticated in house engineering software can optimize/solve sophisticated networks of fluid
-                        components, as well as model physical phenomena using state-of-the-art numerical methods. We also
-                        offer customized software in order to fit client's needs.
-                    </p>
-                    <a href="{% url 'pages:services-custom-engineering-software' %}" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-laptop"></i> Computational Modelling</h4>
-                </div>
-                <div class="panel-body">
-                    <p>
-                        Our experts have developed in house tools for computational modelling, and are also familiar
-                        in several popular open source and commercial engineering software packages.
-                    </p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
+        <div class="col-md-8">
+            <h3 class="page-header">Advanced Mathematical Modelling</h3>
+            <p>
+                Through our extensive experience in the academic world, we offer consulting based on advanced,
+                cutting-edge mathematical approaches to solving a variety of equations that govern the physical
+                phenomena behind many engineering applications.
+            </p>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="page-header">Process Engineering</h3>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'pages/img/process_modelling_icon.png' %}" class="img-responsive">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'pages/img/custom_engineering_icon.png' %}" class="img-responsive">
+        </div>
+        <div class="col-md-8">
+            <h3 class="page-header">Custom Engineering Software</h3>
+            <p>
+                Our sophisticated in house engineering software can optimize/solve sophisticated networks of
+                fluid
+                components, as well as model physical phenomena using state-of-the-art numerical methods. We
+                also
+                offer customized software in order to fit client's needs.
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="page-header">Computational Modelling</h3>
+            <p>
+                Our experts have developed in house tools for computational modelling, and are also familiar
+                in several popular open source and commercial engineering software packages.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'pages/img/computational_icon.png' %}" class="img-responsive">
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block js %}
