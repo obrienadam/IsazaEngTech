@@ -1,0 +1,43 @@
+{% extends '__base.html' %}
+
+{% block navigation %}
+    {% include '_navbar.html' with active='services' %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Computational Fluid Dynamics</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                Computational Fluid Dynamics (CFD) is a rapidly growing field for modelling fluid systems. Significant
+                increases in available computing power have enabled engineers to use numerical models to solve complex
+                fluid equations. This allows them to model everything from the aerodynamics of vehicles to combustion
+                within gas turbine engines. Our team currently focuses our CFD efforts in the modelling of fluid components
+                in manufacturing sysytems.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">
+                CFD of Modelling of Fluid System Components
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                Accurately describing/predicting the performance of large fluid systems also requires understanding the
+                source of inefficiencies at the component levels. Approximately 20&ndash;30% of all energy in fluid
+                systems is consumed by minor losses. Our CFD efforts seek both to reduce the source of these losses by
+                making adjustments to the geometries of these components. Additionally, we're using CFD to create a more
+                complete description of losses, in order to obtain more reliable results from our flagship node network
+                fluid system modeller <a href="{% url 'pages:services-custom-engineering-software' %}">Poiseulle</a>.
+            </p>
+        </div>
+    </div>
+{% endblock %}

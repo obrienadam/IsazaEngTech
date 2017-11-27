@@ -1,4 +1,5 @@
 {% extends '__base.html' %}
+{% load staticfiles %}
 
 {% block navigation %}
     {% include '_navbar.html' with active='services' %}
@@ -53,6 +54,19 @@
                 variables. This provides us with a deeper insight into the underlying physics of many
                 engineering problems.
             </p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static 'pages/img/mbhe-diagram.png' %}" class="img-responsive">
+                    <p class="text-center">Schematic of the Moving Bed Heat Exchanger (MBHE).</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'pages/img/mbhe-temp-profile.png' %}" class="img-responsive img-portfolio">
+                    <p class="text-center">
+                        Temperature profile for the MBHE computed using an analytical solution.
+                    </p>
+                </div>
+            </div>
 
             <h2 class="page-header">Numerical Mathematics</h2>
             <p>

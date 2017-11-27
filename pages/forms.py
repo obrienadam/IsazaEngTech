@@ -28,11 +28,11 @@ class ContactForm(forms.Form):
     }))
 
     def send_email(self):
-        msg = mail.EmailMessage(
-            subject=self.cleaned_data['subject'],
+        mail.EmailMessage(
+            subject='Contact: "{}"'.format(self.cleaned_data['subject']),
             body=self.cleaned_data['message'],
-            to=['pedro.isaza@isazaengtech.com', 'a.obrien@mail.utoronto.ca'],
-            reply_to=[self.cleaned_data['email']]
-        )
-
-        msg.send()
+            to=['info@isazaengtech.com', 'obrienadam89@gmail.com'],
+            from_email='webmaster@isazaengtech.com',
+            reply_to=[self.cleaned_data['email']],
+            attachments=[(file.name, file.file.read(), file.content_type) for file in self.files.getlist('attachments')]
+        ).send()

@@ -10,9 +10,14 @@ urlpatterns = [
     url(r'^services/advanced-mathematical-modelling/$',
         TemplateView.as_view(template_name='pages/advanced_mathematical_modelling.html'),
         name='services-advanced-mathematical-modelling'),
+    url(r'^services/process-engineering/$',
+        TemplateView.as_view(template_name='pages/process_engineering.html'),
+        name='services-process-engineering'),
     url(r'^services/custom-engineering-software/$',
         TemplateView.as_view(template_name='pages/custom_engineering_software.html'),
         name='services-custom-engineering-software'),
-    url(r'^careers/$', TemplateView.as_view(template_name='pages/careers.html'), name='careers'),
+    url(r'^services/computational-modelling/$',
+        TemplateView.as_view(template_name='pages/computational_fluid_dynamics.html'),
+        name='services-computational-fluid-dynamics'),
     url(r'^contact/$', ContactView.as_view(), name='contact')
 ]

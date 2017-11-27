@@ -27,18 +27,19 @@
                 <div class="fill"
                      style="background-image:url('{% static 'pages/img/process_modelling_banner.png' %}');"></div>
                 <div class="carousel-caption">
-                    <h2>Process Engineering</h2>
+                    <h2 class="banner">Process Engineering</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill"
-                     style="background-image:url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-38.jpg');"></div>
                 <!--
                 <div class="fill"
+                     style="background-image:url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-38.jpg');"></div>
+                -->
+                <div class="fill"
                      style="background-image:url('{% static 'pages/img/custom_software_banner.png' %}');"></div>
-                     -->
+
                 <div class="carousel-caption">
-                    <h2>Custom Engineering Software</h2>
+                    <h2 class="banner">Custom Engineering Software</h2>
                 </div>
             </div>
             <div class="item">
@@ -72,33 +73,39 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4 text-center">
-            <img src="{% static 'pages/img/math1.png' %}" class="img-responsive">
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-push-4">
             <h3 class="page-header">Advanced Mathematical Modelling</h3>
             <p>
-                Through our extensive experience in the academic world, we offer consulting based on advanced,
-                cutting-edge mathematical approaches to solving a variety of equations that govern the physical
-                phenomena behind many engineering applications.
+                We offer cutting-edge engineering mathematics consulting. Our team can formulate and solve the governing
+                equations behind today’s complex engineering projects.
             </p>
+            <a href="{% url 'pages:services-advanced-mathematical-modelling' %}" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="col-md-4 text-center col-md-pull-8">
+            <a href="{% url 'pages:services-advanced-mathematical-modelling' %}">
+                <img src="{% static 'pages/img/math1.png' %}" class="img-responsive img-portfolio">
+            </a>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-8">
             <h3 class="page-header">Process Engineering</h3>
+            <p>
+                We develop process modeling tools, and are familiar with today’s commercial programs. Along with our
+                partners, we can take your project from front-end engineering to commissioning and validation.
+            </p>
+            <a href="{% url 'pages:services-process-engineering' %}" class="btn btn-primary">Learn More</a>
         </div>
         <div class="col-md-4">
-            <img src="{% static 'pages/img/process_modelling_icon.png' %}" class="img-responsive">
+            <a href="{% url 'pages:services-process-engineering' %}">
+                <img src="{% static 'pages/img/process_modelling_icon.png' %}" class="img-responsive img-portfolio">
+            </a>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <img src="{% static 'pages/img/custom_engineering_icon.png' %}" class="img-responsive">
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-push-4">
             <h3 class="page-header">Custom Engineering Software</h3>
             <p>
                 Our sophisticated in house engineering software can optimize/solve sophisticated networks of
@@ -107,19 +114,28 @@
                 also
                 offer customized software in order to fit client's needs.
             </p>
+            <a href="{% url 'pages:services-custom-engineering-software' %}" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="col-md-4 col-md-pull-8">
+            <a href="{% url 'pages:services-custom-engineering-software' %}">
+                <img src="{% static 'pages/img/custom_engineering_icon.png' %}" class="img-responsive img-portfolio">
+            </a>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-8">
-            <h3 class="page-header">Computational Modelling</h3>
+            <h3 class="page-header">Computational Fluid Dynamics</h3>
             <p>
                 Our experts have developed in house tools for computational modelling, and are also familiar
                 in several popular open source and commercial engineering software packages.
             </p>
+            <a href="{% url 'pages:services-computational-fluid-dynamics' %}" class="btn btn-primary">Learn More</a>
         </div>
         <div class="col-md-4">
-            <img src="{% static 'pages/img/computational_icon.png' %}" class="img-responsive">
+            <a href="{% url 'pages:services-computational-fluid-dynamics' %}">
+                <img src="{% static 'pages/img/computational_icon.png' %}" class="img-responsive img-portfolio">
+            </a>
         </div>
     </div>
 
